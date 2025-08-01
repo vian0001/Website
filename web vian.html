@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Be My Girlfriend?</title>
+  <style>
+    body {
+      background-color: pink;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: white;
+      font-size: 36px;
+      text-shadow: 2px 2px hotpink;
+    }
+
+    .btn {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .yes {
+      background-color: white;
+      color: hotpink;
+    }
+
+    .no {
+      background-color: white;
+      color: red;
+      position: absolute;
+    }
+
+    .container {
+      position: relative;
+      height: 300px;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 14px;
+      text-shadow: 1px 1px hotpink;
+    }
+  </style>
+</head>
+<body>
+  <h1>Do you want be my girlfriend?</h1>
+  <div class="container">
+    <button class="btn yes" onclick="alert('YAYY 💖💞💘')">Yes</button>
+    <button class="btn no" id="noBtn">No</button>
+  </div>
+
+  <footer>
+    Made by Vian @2025
+  </footer>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight - 100);
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    });
+  </script>
+</body>
+</html>
